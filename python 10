@@ -1,0 +1,14 @@
+Q10. Python program to find sum of array
+
+def sum_of_array(arr):
+    sum = 0
+    for num in arr:
+        sum += num
+    return sum
+
+# Test the function
+array = [1, 2, 3, 4, 5]
+result = sum_of_array(array)
+print("The sum of the array is:", result)
+
+OUTPUT: The sum of the array is: 15
