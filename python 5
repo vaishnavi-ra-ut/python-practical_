@@ -1,0 +1,28 @@
+Q5. Write a program that displays the number of lines in a file and the size of the file in bytes:
+  
+file=open("File.txt", 'r')
+reader=file.readlines()
+
+lines_count =0
+
+word_count=0
+
+for lines in reader:
+
+   lines_count+=1
+
+   for word in lines:
+
+       word_count+=1
+       
+ print(end="Enter File's Name: ")
+fileName = input()
+try:
+  fileHandle = open(fileName, "r")
+  sizeOfFile = 0
+  for line in fileHandle.readlines():
+    sizeOfFile = sizeOfFile + (len(line)+1)
+  sizeOfFile = sizeOfFile-1
+  print("\nFile's Size = " +str(sizeOfFile)+ " bytes")
+except IOError:
+  print("\nThe File doesn't exist!")
