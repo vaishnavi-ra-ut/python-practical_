@@ -1,0 +1,17 @@
+Q4. Write a Program to read file line by line and print it
+
+# Open file
+mf = open("myfile.txt", "r+")
+print("File to read: ", mf.name)
+
+# Read all lines in the file
+file_content = mf.readlines()
+
+# Print all lines in file
+print("Read Line: ", file_content)
+
+# Close opened file
+mf.close()
+
+OUTPUT: File to read:  myfile.txt
+Read Line:  ['Line one\n', 'Line two\n', 'Line three\n', 'Line four\n', 'Line five']
