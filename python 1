@@ -1,0 +1,22 @@
+Q1. Python program to check whether a number is prime or not
+def is_prime(number):
+    if number <= 1:
+        return False
+
+    # Check for divisibility from 2 to the square root of the number
+    for i in range(2, int(number**0.5) + 1):
+        if number % i == 0:
+            return False
+
+    return True
+
+# Test the function
+input_number = int(input("Enter a number: "))
+
+if is_prime(input_number):
+    print(f"{input_number} is a prime number.")
+else:
+    print(f"{input_number} is not a prime number.")
+    
+    OUTPUT: Enter a number: 17
+17 is a prime number.
